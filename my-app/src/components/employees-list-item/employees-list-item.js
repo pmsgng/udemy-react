@@ -21,8 +21,9 @@ class EmployeesListItem extends Component {
             nameClick: !nameClick
         }))
     }
+
     render() {
-        const {name, salary} = this.props
+        const {name, salary, onDelete} = this.props
         const {increase} = this.state;
         const {nameClick} = this.state;
 
@@ -45,7 +46,7 @@ class EmployeesListItem extends Component {
                         <i className="fas fa-cookie"></i>
                     </button>
     
-                    <button type="button"
+                    <button onClick={onDelete} type="button"
                             className="btn-trash btn-sm ">
                         <i className="fas fa-trash"></i>
                     </button>
