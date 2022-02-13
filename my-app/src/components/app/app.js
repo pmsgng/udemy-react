@@ -13,7 +13,7 @@ class App extends Component{
         super(props);
         this.state = {
             data: [
-                {name: 'Alex C.', salary: 800, increase: false, rise: true , id:1,},
+                {name: 'Alex C.', salary: 800, increase: true, rise: true , id:1,},
                 {name: 'Jhon V.', salary: 3000, increase: true, rise: false , id:2,},
                 {name: 'Alexander M.', salary: 5000, increase: false, rise: false , id:3,},
                 {name: 'Vadim K.', salary: 9000, increase: false, rise: false , id:4,},
@@ -24,6 +24,9 @@ class App extends Component{
         this.maxId = 5
     }
 
+    onSalaryChange = () => {
+        this.setState()
+    }
 
     deleteItem = (id) => {
         this.setState(({data}) => {
