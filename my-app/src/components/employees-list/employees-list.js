@@ -11,7 +11,7 @@ const EmployeesList = ({data , onDelete, onToggleProp, onSalaryChange}) => {
             {...itemProps}
             onDelete={() => onDelete(id)}
             onToggleProp={(e) => onToggleProp(id, e.currentTarget.getAttribute('data-toggle'))}
-            onSalaryChange = {(e) => onSalaryChange(e.target.value)}/>
+            onSalaryChange = {(e) => onSalaryChange(e)}/>
         )
     })
 

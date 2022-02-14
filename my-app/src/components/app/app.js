@@ -25,11 +25,11 @@ class App extends Component{
     }
 
     onSalaryChange = (e) => {
-        this.setState(({data}) => {
-            const newSalary = e.target.value
-            
+        this.setState(({data}) => {           
             return {
-                data: data.forEeach(item => item.salary = newSalary)
+                data: data.map(item => {                  
+                    return {...item, salary: e.target.value}
+                })
             }
         })
     }
