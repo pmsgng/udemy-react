@@ -24,8 +24,14 @@ class App extends Component{
         this.maxId = 5
     }
 
-    onSalaryChange = () => {
-        this.setState()
+    onSalaryChange = (e) => {
+        this.setState(({data}) => {
+            const newSalary = e.target.value
+            
+            return {
+                data: data.forEeach(item => item.salary = newSalary)
+            }
+        })
     }
 
     deleteItem = (id) => {
@@ -134,7 +140,8 @@ class App extends Component{
                 <EmployeesList 
                     data={visibleData}
                     onDelete={this.deleteItem}
-                    onToggleProp={this.onToggleProp}/>
+                    onToggleProp={this.onToggleProp}
+                    onSalaryChange={this.onSalaryChange}/>
                 <EmployeesAddForm onAdd={this.addItem}/>
     
             </div>
